@@ -1,0 +1,15 @@
+{
+    "name": "Rust",
+    "image": "ghcr.io/andrmr/registry/rust-dev:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vadimcn.vscode-lldb",
+                "rust-lang.rust-analyzer",
+                "tamasfe.even-better-toml",
+                "fill-labs.dependi",
+                "panicbit.cargo"
+            ]
+        }
+    }
+}
