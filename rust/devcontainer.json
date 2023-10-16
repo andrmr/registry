@@ -1,0 +1,7 @@
+{
+    "name": "Rust",
+    "image": "ghcr.io/andrmr/registry/rust-dev:latest",
+    "features": {
+        "ghcr.io/devcontainers/features/rust:1": {}
+    }
+}
