@@ -1,0 +1,13 @@
+FROM rust:1.73.0-slim-bookworm
+
+RUN apt-get update && apt-get install -y \
+    mold clang-15 \
+    g++-x86-64-linux-gnu libc6-dev-amd64-cross \
+    g++-aarch64-linux-gnu libc6-dev-arm64-cross && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN rustup target add \
+    x86_64-unknown-linux-gnu aarch64-unknown-linux-gnu
+
+LABEL org.opencontainers.image.description="Rust base for multi-stage images"
+LABEL org.opencontainers.image.source=https://github.com/andrmr/registry
